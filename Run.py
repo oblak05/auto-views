@@ -2,6 +2,7 @@ try:
     import requests, re, random, string, base64, urllib.parse, json, time, os, sys
     from requests_toolbelt import MultipartEncoder
     from rich import print as printf
+    import tesseract as pytesseract
     from rich.panel import Panel
     from rich.console import Console
     from requests.exceptions import RequestException
