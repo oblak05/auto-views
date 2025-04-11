@@ -2,7 +2,7 @@ try:
     import requests, re, random, string, base64, urllib.parse, json, time, os, sys
     from requests_toolbelt import MultipartEncoder
     from rich import print as printf
-    import tesseract
+    import easyocr
     from rich.panel import Panel
     from rich.console import Console
     from requests.exceptions import RequestException
@@ -81,7 +81,7 @@ class DIPERLUKAN:
     def BYPASS_CAPTCHA(self) -> str:
         self.file_gambar = ('Penyimpanan/Gambar.png')
         self.image = Image.open(self.file_gambar)
-        self.image_string = tesseract.image_to_string(self.image)
+        self.image_string = easyocr.image_to_string(self.image)
         return self.image_string.replace('\n', '')
     
     def MENDAPATKAN_FORMULIR(self, video_url: str) -> bool:
